@@ -10,17 +10,30 @@ public class UserDTO {
     private String password;
     private Set<Role> roles;
 
-    public UserDTO(String name, String lastName, String password, String admin, String user, Set<Role> roles) {
-        this.name = name;
-        this.lastName = lastName;
-        this.password = password;
-        this.roles = roles;
-    }
-
     public UserDTO() {
     }
 
-    public int getId() {
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
+    }
+
+     public int getId() {
         return id;
     }
 
@@ -38,3 +51,5 @@ public class UserDTO {
         return roles;
     }
 }
+
+

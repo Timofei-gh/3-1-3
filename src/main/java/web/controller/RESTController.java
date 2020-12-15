@@ -9,7 +9,6 @@ import web.model.User;
 import web.model.UserDTO;
 import web.service.RoleService;
 import web.service.UserService;
-
 import java.security.Principal;
 import java.util.List;
 
@@ -48,6 +47,17 @@ public class RESTController {
         return userService.allUsers();
     }
 
+    @GetMapping("/allRoles")
+    public List<Role> allRoles() {
+        return roleService.allRoles();
+    }
+
+    @GetMapping("/getUser/{name}")
+    public User getById(@PathVariable(name = "name") String name) {
+        return userService.getUserByName(name);
+    }
+
+
     @PostMapping("/addUser")
     public ResponseEntity<?> addUser(@RequestBody UserDTO userDTO) {
         User user = new User(userDTO);
@@ -66,16 +76,6 @@ public class RESTController {
     public ResponseEntity<?> deleteUser(@RequestBody User user) {
         userService.delete(user);
         return new ResponseEntity<>(HttpStatus.OK);
-    }
-
-    @GetMapping("/getUser/{name}")
-    public User getById(@PathVariable(name = "name") String name) {
-        return userService.getUserByName(name);
-    }
-
-    @GetMapping("/allRoles")
-    public List<Role> allRoles() {
-        return roleService.allRoles();
     }
 
 }

@@ -10,27 +10,13 @@ import java.util.Set;
 public class Role implements GrantedAuthority {
     @Id
     @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @Column(name = "role")
     private String role;
 
     public Role() {
-
-    }
-
-    public Role(int id, String role) {
-        this.id = id;
-        this.role = role;
-    }
-
-    public Role(int id) {
-        this.id = id;
-    }
-
-    public Role(String role) {
-        this.role = role;
     }
 
     @Transient

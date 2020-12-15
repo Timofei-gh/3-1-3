@@ -15,7 +15,7 @@ public class User implements UserDetails {
 
     @Id
     @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @Column(name = "name")
@@ -33,20 +33,6 @@ public class User implements UserDetails {
     public User() {
     }
 
-    public User(int id, String name, String lastName, String password, Set<Role> roles) {
-        this.id = id;
-        this.name = name;
-        this.lastName = lastName;
-        this.password = password;
-        this.roles = roles;
-    }
-
-    public User(String name, String password, String lastName, Set<Role> roles) {
-        this.name = name;
-        this.lastName = lastName;
-        this.password = password;
-        this.roles = roles;
-    }
 
     public User(UserDTO userDTO) {
         this.id = userDTO.getId();
