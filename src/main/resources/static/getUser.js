@@ -68,7 +68,7 @@ function getUser() {
             output += "<tr>";
 
             let output2 = "";
-            output2 += `${user.name}  with roles: ${user.roles}`;
+            output2 += `Пользователь ${user.name} с ролями: ${user.roles}`;
             document.getElementById("header").innerHTML = output2;
             document.getElementById("tabsAdminUser").innerHTML = output3;
             if (userRoles === "ROLE_USER ") {

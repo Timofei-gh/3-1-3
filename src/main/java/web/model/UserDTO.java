@@ -5,13 +5,9 @@ import java.util.Set;
 public class UserDTO {
 
     private int id;
-
     private String name;
-
     private String lastName;
-
     private String password;
-
     private Set<Role> roles;
 
     public UserDTO(String name, String lastName, String password, String admin, String user, Set<Role> roles) {

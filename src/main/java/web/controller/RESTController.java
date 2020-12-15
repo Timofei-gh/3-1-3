@@ -38,12 +38,6 @@ public class RESTController {
         return modelAndView;
     }
 
-    @RequestMapping("/")
-    public ModelAndView index(ModelAndView modelAndView) {
-        modelAndView.setViewName("login");
-        return modelAndView;
-    }
-
     @GetMapping("/getUser")
     public User getUser(Principal principal) {
         return userService.getUserByName(principal.getName());

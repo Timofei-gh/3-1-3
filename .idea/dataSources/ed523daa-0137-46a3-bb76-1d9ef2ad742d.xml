@@ -915,8 +915,8 @@ SELECT|sys.sys_config
     </user>
     <table id="286" parent="2" name="hibernate_sequence"/>
     <table id="287" parent="2" name="roles"/>
-    <table id="288" parent="2" name="users_security"/>
-    <table id="289" parent="2" name="users_security_roles"/>
+    <table id="288" parent="2" name="users"/>
+    <table id="289" parent="2" name="users_roles"/>
     <column id="290" parent="286" name="next_val">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
@@ -967,7 +967,7 @@ SELECT|sys.sys_config
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="301" parent="289" name="FKiebittp85smk1koa9i9ck1euf">
+    <index id="301" parent="289" name="FKa62j07k5mhgifpp955h37ponj">
       <ColNames>roles_id</ColNames>
       <Type>btree</Type>
     </index>
@@ -977,12 +977,12 @@ SELECT|sys.sys_config
 roles_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="303" parent="289" name="FK1duc1ckqjsw1kcqk3kgmkt8vc">
+    <foreign-key id="303" parent="289" name="FK2o0jvgh89lemvvo17cbqvdxaa">
       <ColNames>user_id</ColNames>
-      <RefTableName>users_security</RefTableName>
+      <RefTableName>users</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="304" parent="289" name="FKiebittp85smk1koa9i9ck1euf">
+    <foreign-key id="304" parent="289" name="FKa62j07k5mhgifpp955h37ponj">
       <ColNames>roles_id</ColNames>
       <RefTableName>roles</RefTableName>
       <RefColNames>id</RefColNames>
