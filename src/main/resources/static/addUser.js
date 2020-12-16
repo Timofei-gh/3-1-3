@@ -8,7 +8,7 @@ function addNewUser(e) {
     let password = document.getElementById("password").value;
     let roles = setRoles(Array.from(document.getElementById("roles").selectedOptions).map(option => option.value));
 
-    fetch("http://localhost:8088/addUser", {
+    fetch("addUser", {
         method: 'POST',
         headers: {
             "Accept": "application/json, text/plain, */*",
@@ -31,7 +31,7 @@ function addNewUser(e) {
 }
 
 function inputRolesIntoAdd() {
-    fetch("http://localhost:8088/allRoles").then((res) => res.json())
+    fetch("allRoles").then((res) => res.json())
         .then((data) => {
             let output = "";
             data.forEach(function (role) {

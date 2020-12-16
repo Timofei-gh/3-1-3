@@ -23,20 +23,6 @@ public class RESTController {
         this.roleService = roleService;
     }
 
-    @RequestMapping("/user")
-    public ModelAndView user(ModelAndView modelAndView) {
-        modelAndView.setViewName("user");
-        return modelAndView;
-    }
-
-    @RequestMapping("/admin")
-    public ModelAndView admin(ModelAndView modelAndView) {
-        List<Role> roles = roleService.allRoles();
-        modelAndView.setViewName("admin");
-        modelAndView.addObject("rolesList", roles);
-        return modelAndView;
-    }
-
     @GetMapping("/getUser")
     public User getUser(Principal principal) {
         return userService.getUserByName(principal.getName());

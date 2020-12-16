@@ -1,6 +1,6 @@
 
 function getUsers() {
-    fetch("http://localhost:8088/allUsers")
+    fetch("allUsers")
         .then((res) => res.json())
         .then((data) => {
             let output = "";

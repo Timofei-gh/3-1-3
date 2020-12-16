@@ -9,7 +9,7 @@ function editPost(e) {
     let password = document.getElementById("passwordEdit").value;
     let roles = setRoles(Array.from(document.getElementById("roleEdit").selectedOptions).map(option => option.value));
 
-    fetch("http://localhost:8088/editUser", {
+    fetch("editUser", {
         method: "PUT",
         headers: {
             "Accept": "application/json, text/plain, */*",

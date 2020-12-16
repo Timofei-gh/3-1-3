@@ -10,7 +10,7 @@ function deletePost(e) {
     let roles = setRoles(Array.from(document.getElementById("roleDelete").selectedOptions)
         .map(option => option.value));
 
-    fetch("http://localhost:8088/deleteUser", {
+    fetch("deleteUser", {
         method: "DELETE",
         headers: {
             "Accept": "application/json, text/plain, */*",
@@ -43,7 +43,7 @@ function deletePost(e) {
 }
 
 function inputRolesIntoDelete() {
-    fetch("http://localhost:8088/allRoles").then((res) => res.json())
+    fetch("allRoles").then((res) => res.json())
         .then((data) => {
             let output = "";
             data.forEach(function (role) {

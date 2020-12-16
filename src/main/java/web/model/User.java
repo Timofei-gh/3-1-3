@@ -33,7 +33,6 @@ public class User implements UserDetails {
     public User() {
     }
 
-
     public User(UserDTO userDTO) {
         this.id = userDTO.getId();
         this.name = userDTO.getName();

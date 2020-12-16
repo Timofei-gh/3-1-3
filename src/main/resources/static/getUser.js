@@ -1,4 +1,4 @@
-const url = "http://localhost:8088/getUser"
+const url = "getUser"
 
 function getUser() {
 
