@@ -2,6 +2,7 @@ document.getElementById("newUser").addEventListener("submit", addNewUser);
 document.getElementById("deleteUserModal").addEventListener("submit", deletePost)
 document.getElementById("updateUserModal").addEventListener("submit", editPost)
 
+/*==========  ДОБАВЛЕНИЕ ==========*/
 
 function addNewUser(e) {
     e.preventDefault();
@@ -46,7 +47,7 @@ function inputRolesIntoAdd() {
 
 inputRolesIntoAdd()
 
-
+/*==========  УДАЛЕНИЕ ==========*/
 
 function deletePost(e) {
     e.preventDefault();
@@ -78,16 +79,6 @@ function deletePost(e) {
             getHeader()
         });
 
-    function setRoles(someRoles) {
-        let roles = [];
-        if (someRoles.indexOf("ROLE_USER") >= 0) {
-            roles.push({"role": "ROLE_USER"});
-        }
-        if (someRoles.indexOf("ROLE_ADMIN") >= 0) {
-            roles.push({"role": "ROLE_ADMIN"});
-        }
-        return roles;
-    }
 }
 
 function inputRolesIntoDelete() {
@@ -110,6 +101,7 @@ function modalWindowDelete(id) {
     document.getElementById("passwordDelete").value = $("#password" + id).text();
 }
 
+/*==========  РЕДАКТИРОВАНИЕ ==========*/
 
 function editPost(e) {
     e.preventDefault();
