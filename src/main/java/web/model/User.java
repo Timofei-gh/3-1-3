@@ -33,6 +33,14 @@ public class User implements UserDetails {
     public User() {
     }
 
+    public User(int id, String name, String lastName, String password, Set<Role> roles) {
+        this.id = id;
+        this.name = name;
+        this.lastName = lastName;
+        this.password = password;
+        this.roles = roles;
+    }
+
     public User(UserDTO userDTO) {
         this.id = userDTO.getId();
         this.name = userDTO.getName();
